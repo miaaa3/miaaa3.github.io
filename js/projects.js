@@ -3,6 +3,7 @@ window.PROJECTS = [
   {
     id: 'nexus', featured: true, cat: 'web graphics', kind: 'master', year: '2026',
     title: 'NexusNexus',
+    level: { en: 'BOSS LEVEL', fr: 'NIVEAU BOSS' }, file: 'nexusnexus.ts', ic: 'ts',
     short: { en: 'a city, live', fr: 'une ville, en direct' },
     strip: [['nexus/loop.mp4',608],['nexus/4.jpg',754],['nexus/6.jpg',450],['nexus/5.jpg',764],['nexus/3.jpg',608]],
     role: { en: "Master's project · UHA · solo", fr: 'Projet de master · UHA · seule' },
@@ -24,6 +25,7 @@ window.PROJECTS = [
   {
     id: 'v2v', featured: true, cat: 'graphics systems', kind: 'master', year: '2026',
     title: 'V2V Simulator',
+    level: { en: 'HARD MODE', fr: 'MODE DIFFICILE' }, file: 'v2v.cpp', ic: 'cpp',
     short: { en: 'cars that talk', fr: 'des voitures qui se parlent' },
     strip: [['v2v/1.jpg',688],['v2v/4.jpg',306],['v2v/2.jpg',676],['v2v/5.jpg',676],['v2v/3.jpg',676]],
     role: { en: "Master's project · UHA · with M. Chouadra", fr: 'Projet de master · UHA · avec M. Chouadra' },
@@ -45,6 +47,7 @@ window.PROJECTS = [
   {
     id: 'lingobingo', featured: true, cat: 'web', kind: 'intern', year: '2025',
     title: 'LingoBingo',
+    level: { en: 'INTERNSHIP QUEST', fr: 'QUÊTE DE STAGE' }, file: 'lingobingo.ts', ic: 'ts',
     short: { en: 'quizzes, but fun', fr: 'des quiz, mais drôles' },
     strip: [['lingobingo/01-welcome.jpg',608],['lingobingo/10-student-dashboard.jpg',608],['lingobingo/12-flashcard.jpg',608],['lingobingo/02-teacher-dashboard.jpg',608],['lingobingo/08-generate.jpg',608],['lingobingo/13-practice.jpg',608]],
     role: { en: 'Internship · La Rochelle University', fr: 'Stage · La Rochelle Université' },
@@ -66,6 +69,7 @@ window.PROJECTS = [
   {
     id: 'helpinghands', featured: true, cat: 'web', kind: 'intern', year: '2023 – 2026',
     title: 'HelpingHands',
+    level: { en: 'IBM QUEST', fr: 'QUÊTE IBM' }, file: 'helpinghands.ts', ic: 'ts',
     short: { en: 'volunteering, as an app', fr: 'le bénévolat, en appli' },
     strip: [['helpinghands/01-welcome.jpg',608],['helpinghands/03-home-feed.jpg',608],['helpinghands/04-opportunities.jpg',608],['helpinghands/05-messages.jpg',608],['helpinghands/08-org-dashboard.jpg',608],['helpinghands/09-admin.jpg',608]],
     role: { en: 'Started at IBM · rebuilt independently', fr: 'Commencé chez IBM · reconstruit ensuite' },
@@ -87,6 +91,7 @@ window.PROJECTS = [
   {
     id: 'klosnowo', cat: 'systems', kind: 'school', year: '2026',
     title: 'Klosnowo',
+    level: { en: 'RETRO', fr: 'RÉTRO' }, file: 'klosnowo.c', ic: 'cpp',
     short: { en: 'a game in C', fr: 'un jeu en C' },
     strip: [['klosnowo/3.jpg',1020],['klosnowo/24.jpg',1020]],
     role: { en: 'School project · ENSISA Immersion 2026', fr: 'Projet d\u2019école · ENSISA Immersion 2026' },
@@ -108,6 +113,7 @@ window.PROJECTS = [
   {
     id: 'lbp', cat: 'systems', kind: 'master', year: '2026',
     title: 'LBP Parking Classifier',
+    level: { en: 'PUZZLE', fr: 'CASSE-TÊTE' }, file: 'lbp.cpp', ic: 'cpp',
     short: { en: 'free or taken?', fr: 'libre ou occupée ?' },
     strip: [['lbp/1.jpg',710],['lbp/3.jpg',396],['lbp/2.jpg',1378],['lbp/4.jpg',1138]],
     role: { en: "Master's lab · UHA · extended", fr: 'TP de master · UHA · enrichi' },
@@ -129,6 +135,7 @@ window.PROJECTS = [
   {
     id: 'togetherly', cat: 'web', kind: 'team', year: '2023',
     title: 'Togetherly',
+    level: { en: 'CO-OP', fr: 'COOPÉRATIF' }, file: 'togetherly.ts', ic: 'ts',
     short: { en: 'a social network', fr: 'un réseau social' },
     strip: [['togetherly/1.jpg',668],['togetherly/4.jpg',208],['togetherly/8.jpg',676],['togetherly/5.jpg',178],['togetherly/11.jpg',198]],
     role: { en: 'Team project · with Fattah Amil', fr: 'Projet d\u2019équipe · avec Fattah Amil' },

@@ -3,174 +3,187 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meryem Belmouaddine, full-stack developer</title>
-<meta name="description" content="Meryem Belmouaddine, from Casablanca, Master's student in Computer Science &amp; Mobility in Mulhouse. Full-stack and mobile developer looking for a 6-month internship from February 2027.">
+<title>Mia OS · Meryem Belmouaddine, full-stack developer</title>
+<meta name="description" content="Meryem Belmouaddine (Mia), full-stack and mobile developer from Casablanca, Master's student in Mulhouse, looking for a 6-month internship from February 2027.">
 <meta name="author" content="Meryem Belmouaddine">
 <meta name="theme-color" content="#141019">
 <meta name="color-scheme" content="dark">
 <link rel="canonical" href="https://miaaa3.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://miaaa3.github.io/">
-<meta property="og:title" content="Meryem Belmouaddine, full-stack developer">
-<meta property="og:description" content="From Casablanca to Mulhouse: apps from the API to the last pixel, and cities full of cars. Looking for a 6-month internship from February 2027.">
+<meta property="og:title" content="Hi, I'm Mia. I ship apps end to end.">
+<meta property="og:description" content="Meryem Belmouaddine, full-stack and mobile developer from Casablanca, studying in Mulhouse. Looking for a 6-month internship from February 2027.">
 <meta property="og:image" content="https://miaaa3.github.io/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://api.fontshare.com">
-<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&display=swap" rel="stylesheet">
-<link href="https://api.fontshare.com/v2/css?f[]=zodiak@100,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600&family=Outfit:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<a class="skip" href="#work" data-i18n="skip">Skip to the work</a>
+<a class="skip" href="#readme" data-i18n="skip">Skip to content</a>
 
-<header class="hero" id="top">
-  <div class="hero-text">
-    <a class="mark" href="#top" aria-label="Meryem Belmouaddine">
-      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2l5.3 7.3 8.9-1.5-1.5 8.9L40 20l-7.3 5.3 1.5 8.9-8.9-1.5L20 40l-5.3-7.3-8.9 1.5 1.5-8.9L0 20l7.3-5.3-1.5-8.9 8.9 1.5z"/></svg>
-    </a>
-    <div class="hero-copy">
-      <h1 id="heroTitle"><span class="line"><span data-i18n="hero.l1">Meryem Belmouaddine,</span></span><span class="line"><span data-i18n="hero.l2">full-stack developer</span></span></h1>
-      <p class="hero-sub" data-i18n="hero.sub">I build apps from the API to the last pixel, and, for fun, whole cities full of cars. Looking for a 6-month internship from February 2027.</p>
-      <a class="button" href="assets/CV-Meryem-Belmouaddine.pdf" target="_blank" rel="noopener" data-i18n="hero.cta">Download my CV</a>
-    </div>
-  </div>
-
-  <div class="hero-stage">
-    <button class="lang-link" type="button" id="langLink" data-i18n="lang.switch">Français</button>
-    <figure class="city" data-ui id="city">
-      <div class="city-tabs" role="tablist" aria-label="City">
-        <button role="tab" type="button" data-city="casablanca" aria-selected="true"><b>Casablanca</b><span data-i18n="city.born">where I was born</span></button>
-        <button role="tab" type="button" data-city="la-rochelle" aria-selected="false"><b>La Rochelle</b><span data-i18n="city.studied">where I studied</span></button>
-        <button role="tab" type="button" data-city="mulhouse" aria-selected="false"><b>Mulhouse</b><span data-i18n="city.now">where I study now</span></button>
-      </div>
-      <div class="city-map">
-        <canvas id="cityCanvas" aria-label="A live map of real streets with small cars driving on them"></canvas>
-        <p class="city-fallback" data-i18n="city.fallback">A live map of the city, with my cars driving on its real streets. It needs JavaScript.</p>
-      </div>
-      <div class="city-controls">
-        <label for="carCount" data-i18n="city.cars">Cars</label>
-        <input id="carCount" type="range" min="50" max="4000" step="50" value="700">
-        <output id="cityReadout" for="carCount">700 cars · 60 fps</output>
-      </div>
-      <figcaption><span data-i18n="city.hint">Tap a street to cause a traffic jam.</span> <span class="osm">Streets © OpenStreetMap contributors</span></figcaption>
-    </figure>
+<header class="titlebar">
+  <div class="lights" aria-hidden="true"><i></i><i></i><i></i></div>
+  <a class="titlebar-name" href="#readme">mia-os <span>— ~/portfolio</span></a>
+  <div class="titlebar-actions">
+    <button type="button" class="pill" id="langBtn" data-i18n="lang">FR</button>
+    <a class="pill pill-rose" href="assets/CV-Meryem-Belmouaddine.pdf" target="_blank" rel="noopener">cv.pdf ↓</a>
   </div>
 </header>
 
-<main>
-  <section class="work" id="work" aria-labelledby="workTitle">
-    <div class="work-rail">
-      <h2 id="workTitle" data-i18n="work.title">Work</h2>
-      <div class="filters" role="group" aria-label="Filter projects">
-        <button type="button" data-filter="all" aria-pressed="true" data-i18n="filter.all">Everything</button>
-        <button type="button" data-filter="web" aria-pressed="false" data-i18n="filter.web">Web apps</button>
-        <button type="button" data-filter="graphics" aria-pressed="false" data-i18n="filter.graphics">Simulation</button>
-        <button type="button" data-filter="systems" aria-pressed="false" data-i18n="filter.systems">C and vision</button>
-      </div>
+<div class="os">
+  <nav class="explorer" aria-label="Sections">
+    <p class="explorer-title" data-i18n="explorer">explorer</p>
+    <a href="#readme" class="file"><b class="ic md">MD</b>README.md</a>
+    <a href="#projects" class="file folder"><b class="ic dir">▾</b>projects/</a>
+    <div class="sub" id="projectFiles"></div>
+    <a href="#experience" class="file"><b class="ic log">LOG</b>experience.log</a>
+    <a href="#about" class="file"><b class="ic fl">✿</b>about-casablanca.md</a>
+    <a href="#skills" class="file"><b class="ic js">{}</b>skills.json</a>
+    <a href="#contact" class="file"><b class="ic sh">SH</b>contact.sh</a>
+    <button type="button" class="file" id="openTerm"><b class="ic sh">&gt;_</b><span data-i18n="explorer.term">terminal</span></button>
+    <div class="quest">
+      <p class="explorer-title"><span data-i18n="quest.title">achievements</span> <span id="achCount">0/8</span></p>
+      <ul id="achList"></ul>
     </div>
-    <div class="strips" id="strips"></div>
-  </section>
+  </nav>
 
-  <section class="about" id="about" aria-labelledby="aboutTitle">
-    <div class="about-panel">
-      <div class="about-left">
-        <h2 id="aboutTitle" class="statement rise"><span data-i18n="about.l1">Born in Casablanca.</span><br><span data-i18n="about.l2">Coding in Mulhouse.</span></h2>
-        <img class="arch rise" src="assets/main-entrance-door-at-the-hassan-ii.jpg" width="1263" height="1600" alt="The main door of the Hassan II Mosque in Casablanca, carved wood and zellige" loading="lazy" decoding="async">
-      </div>
-      <div class="about-right">
-        <div class="rise">
-          <h3 data-i18n="about.h1">The route so far</h3>
-          <p data-i18n="about.p1">A BTS and a professional bachelor's in Morocco, a bachelor's in computer science in La Rochelle, and now the Master's in Computer Science and Mobility at Université de Haute-Alsace. Four internships on the way: IBM twice, AGILTEEM and La Rochelle University.</p>
+  <main class="editor" id="main">
+    <div class="tabs" aria-hidden="true"><span class="tab" id="currentTab">README.md</span></div>
+
+    <!-- ================= README ================= -->
+    <section class="readme" id="readme" data-file="README.md">
+      <div class="readme-text">
+        <p class="crumb">portfolio › README.md</p>
+        <p class="status-chip"><span class="dot"></span><span data-i18n="hero.status">open to a 6-month internship · from Feb 2027</span></p>
+        <h1 data-i18n="hero.title">Hi, I'm Mia.<br>I ship apps <em>end to end.</em></h1>
+        <p class="lead" data-i18n="hero.lead"><b>Meryem Belmouaddine</b>, full-stack &amp; mobile developer from Casablanca, now in a Master's in Mulhouse. I built a city of 15,000 live cars in a browser, a C++ simulator with 19,000 vehicles, and apps real teachers use.</p>
+        <div class="actions">
+          <a class="btn btn-violet" href="#projects" data-i18n="hero.cta1">open projects/</a>
+          <a class="btn btn-ghost" href="mailto:belmouaddine.ptech@gmail.com" data-i18n="hero.cta2">say hi ✉</a>
         </div>
-        <div class="rise">
-          <h3 data-i18n="about.h2">What I'm looking for</h3>
-          <p data-i18n="about.p2">A 6-month end-of-studies internship from February 2027, on site. Alsace first, anywhere in France works. Full-stack, mobile, or anything with a map in it.</p>
+        <p class="drag-hint" data-i18n="hero.hint">psst, the stickers are draggable →</p>
+      </div>
+
+      <div class="desk" id="desk" aria-label="Project polaroids and stickers">
+        <a class="polaroid drag" href="#p-nexus" style="--x:4%;--y:4%;--r:-5deg;--w:58%"><span class="tape"></span><img src="assets/strips/nexus/1.jpg" alt="NexusNexus: thousands of cars on La Rochelle's streets" width="608" height="380"><span class="cap">NexusNexus · 15k cars</span></a>
+        <a class="polaroid drag" href="#p-lingobingo" style="--x:40%;--y:22%;--r:6deg;--w:56%"><span class="tape"></span><img src="assets/strips/lingobingo/01-welcome.jpg" alt="LingoBingo landing page" width="608" height="380"><span class="cap" data-i18n="pol.lingo">LingoBingo · for a real teacher</span></a>
+        <a class="polaroid drag" href="#p-v2v" style="--x:10%;--y:52%;--r:3deg;--w:52%"><img src="assets/strips/v2v/1.jpg" alt="V2V Simulator dashboard" width="688" height="380"><span class="cap" data-i18n="pol.v2v">V2V · 19,000 cars talking</span></a>
+        <span class="sticker s-casa drag" style="--x:74%;--y:0%;--r:-12deg" data-i18n="st.casa">made in<br>casa ✦<br>mulhouse</span>
+        <span class="sticker s-intern drag" style="--x:0%;--y:44%;--r:8deg" data-i18n="st.intern">4 internships</span>
+        <span class="sticker s-code drag" style="--x:36%;--y:1%;--r:-5deg">console.log("hire me")</span>
+        <span class="sticker s-star drag" style="--x:82%;--y:58%;--r:10deg" aria-hidden="true">✦</span>
+        <span class="sticker s-coffee drag" style="--x:62%;--y:80%;--r:-8deg" data-i18n="st.coffee">powered by ☕</span>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee">
+      <span>✿ angular</span><span>✿ spring boot</span><span>✿ typescript</span><span>✿ c++</span><span>✿ webgl</span><span>✿ swift</span><span>✿ docker</span><span data-i18n="mq.casa">✿ from casablanca</span><span data-i18n="mq.coffee">✿ coffee-driven</span><span data-i18n="mq.feb">✿ available feb 2027</span>
+    </div></div>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section" id="projects" data-file="projects/">
+      <header class="section-head">
+        <p class="crumb">portfolio › projects/</p>
+        <h2 data-i18n="proj.title">Things I've <em>built</em></h2>
+        <p data-i18n="proj.sub">Seven projects, all open source and documented. Click a polaroid for screenshots and the full story.</p>
+        <div class="filters" role="group" aria-label="Filter">
+          <button type="button" data-filter="all" aria-pressed="true" data-i18n="f.all">all</button>
+          <button type="button" data-filter="web" aria-pressed="false" data-i18n="f.web">web apps</button>
+          <button type="button" data-filter="graphics" aria-pressed="false" data-i18n="f.gfx">simulation</button>
+          <button type="button" data-filter="systems" aria-pressed="false" data-i18n="f.sys">c &amp; vision</button>
         </div>
-        <a class="button rise" href="mailto:belmouaddine.ptech@gmail.com?subject=Internship%20from%20February%202027" data-i18n="about.cta">Write to me</a>
-      </div>
-    </div>
-  </section>
+      </header>
+      <div class="projects" id="projectList"></div>
+    </section>
 
-  <section class="lineup" id="lineup" aria-labelledby="lineupTitle">
-    <h2 id="lineupTitle" class="visually-hidden" data-i18n="lineup.title">Experience, studies and tools</h2>
-    <div class="group rise">
-      <h3 class="group-head" data-i18n="g.morocco">Morocco, 2021 to 2024</h3>
-      <table>
-        <tr><td data-i18n="r.bts">BTS, information systems development</td><td>Centre de BTS Abderrahman Ibn Ghazala</td><td data-i18n="k.studies">studies</td><td>2021–2023</td></tr>
-        <tr><td data-i18n="r.ibm1">Web developer, staff management app</td><td>IBM</td><td data-i18n="k.intern">internship</td><td data-i18n="d.ibm1">Aug 2022</td></tr>
-        <tr><td data-i18n="r.ibm2">Full-stack developer, volunteering network</td><td>IBM</td><td data-i18n="k.intern">internship</td><td data-i18n="d.ibm2">Aug–Sep 2023</td></tr>
-        <tr><td data-i18n="r.est">Professional bachelor's, IT systems and web</td><td>École Supérieure de Technologie</td><td data-i18n="k.studies">studies</td><td>2023–2024</td></tr>
-        <tr><td data-i18n="r.agil">Web developer, sites for large companies</td><td>AGILTEEM</td><td data-i18n="k.intern">internship</td><td data-i18n="d.agil">Apr–May 2024</td></tr>
-      </table>
-    </div>
-    <div class="group with-pics rise">
-      <h3 class="group-head" data-i18n="g.lr">La Rochelle, 2024 to 2025</h3>
-      <table>
-        <tr><td data-i18n="r.lic">Bachelor's in computer science, third year</td><td>La Rochelle Université</td><td data-i18n="k.studies">studies</td><td>2024–2025</td></tr>
-        <tr><td data-i18n="r.lingo">Full-stack developer, LingoBingo</td><td>La Rochelle Université</td><td data-i18n="k.intern">internship</td><td data-i18n="d.lingo">Apr–Jun 2025</td></tr>
-      </table>
-      <div class="pics">
-        <img src="assets/la-rochelle-vue-du-port.jpg" width="1190" height="810" alt="The old port of La Rochelle and its towers, around 1905" loading="lazy" decoding="async">
-        <img src="assets/plan-la-rochelle-et-environs-1773-nicolas.jpg" width="1600" height="1145" alt="A 1773 map of La Rochelle by Nicolas Chalmandrier" loading="lazy" decoding="async">
-      </div>
-    </div>
-    <div class="group with-pics rise">
-      <h3 class="group-head" data-i18n="g.mul">Mulhouse, 2025 to 2027</h3>
-      <table>
-        <tr><td data-i18n="r.master">Master's in computer science and mobility</td><td>Université de Haute-Alsace</td><td data-i18n="k.studies">studies</td><td>2025–2027</td></tr>
-        <tr class="next"><td data-i18n="r.next">Your team, I hope</td><td data-i18n="r.next2">six months, on site</td><td data-i18n="k.intern">internship</td><td data-i18n="d.next">from Feb 2027</td></tr>
-      </table>
-      <div class="pics">
-        <img src="assets/bugatti-type-30-at-cite-de-l.jpg" width="1600" height="1202" alt="A 1925 Bugatti Type 30 at the Cité de l'Automobile, the car museum of Mulhouse" loading="lazy" decoding="async">
-      </div>
-    </div>
-    <div class="group rise">
-      <h3 class="group-head" data-i18n="g.tools">Tools</h3>
-      <table class="tools">
-        <tr><td colspan="3">Java, TypeScript, Angular, Spring Boot, REST, MySQL</td><td data-i18n="t.daily">every day</td></tr>
-        <tr><td colspan="3">Git, GitHub Actions, Docker, Linux, Maven</td><td data-i18n="t.daily">every day</td></tr>
-        <tr><td colspan="3">C++, C, OpenGL, WebGL2, MapLibre, OpenCV</td><td data-i18n="t.projects">in projects</td></tr>
-        <tr><td colspan="3">Swift, SwiftUI, Python, PHP, Symfony, React</td><td data-i18n="t.projects">in projects</td></tr>
-        <tr><td colspan="3" data-i18n="t.langs">Arabic, French, English</td><td data-i18n="t.langs2">native, fluent, advanced</td></tr>
-      </table>
-    </div>
-  </section>
+    <!-- ================= EXPERIENCE ================= -->
+    <section class="section" id="experience" data-file="experience.log">
+      <header class="section-head">
+        <p class="crumb">portfolio › experience.log</p>
+        <h2 data-i18n="exp.title">git log <em>--my-life</em></h2>
+        <p data-i18n="exp.sub">From Casablanca to Mulhouse, one commit at a time.</p>
+      </header>
+      <ol class="log" id="log">
+        <li class="commit next"><span class="hash">HEAD</span><div><p class="when" data-i18n="c.next.when">feb 2027 · your city?</p><h3 data-i18n="c.next.t">Your team, I hope</h3><p data-i18n="c.next.d">6-month end-of-studies internship, on site. Alsace first, anywhere in France works.</p></div><span class="branch" data-i18n="c.next.b">pending merge</span></li>
+        <li class="commit"><span class="hash">a3f9c21</span><div><p class="when" data-i18n="c.uha.when">2025 → 2027 · Mulhouse</p><h3 data-i18n="c.uha.t">Master's in Computer Science &amp; Mobility</h3><p data-i18n="c.uha.d">Université de Haute-Alsace. iOS, cloud, application security, machine learning, 3D.</p></div><span class="branch">studies</span></li>
+        <li class="commit"><span class="hash">7be0d4e</span><div><p class="when" data-i18n="c.lr.when">apr → jun 2025 · La Rochelle</p><h3 data-i18n="c.lr.t">Full-stack developer intern, La Rochelle University</h3><p data-i18n="c.lr.d">Built LingoBingo for an English teacher: Quizlet-style flashcards and Kahoot-style live quizzes. Spring Boot, Angular, Tailwind.</p></div><span class="branch">internship</span></li>
+        <li class="commit"><span class="hash">51c8a90</span><div><p class="when" data-i18n="c.lic.when">2024 → 2025 · La Rochelle</p><h3 data-i18n="c.lic.t">Bachelor's in Computer Science, 3rd year</h3><p data-i18n="c.lic.d">La Rochelle Université. First year in France.</p></div><span class="branch">studies</span></li>
+        <li class="commit"><span class="hash">e2d61f3</span><div><p class="when" data-i18n="c.agil.when">apr → may 2024 · Morocco</p><h3 data-i18n="c.agil.t">Web developer intern, AGILTEEM</h3><p data-i18n="c.agil.d">Websites for large companies, inside an agile team.</p></div><span class="branch">internship</span></li>
+        <li class="commit"><span class="hash">9a04b7c</span><div><p class="when" data-i18n="c.est.when">2023 → 2024 · Morocco</p><h3 data-i18n="c.est.t">Professional bachelor's, IT Systems &amp; Web</h3><p data-i18n="c.est.d">École Supérieure de Technologie.</p></div><span class="branch">studies</span></li>
+        <li class="commit"><span class="hash">c66e1a8</span><div><p class="when" data-i18n="c.ibm2.when">aug → sep 2023 · Morocco</p><h3 data-i18n="c.ibm2.t">Full-stack developer intern, IBM</h3><p data-i18n="c.ibm2.d">A social network for volunteering, front and back. It became HelpingHands.</p></div><span class="branch">internship</span></li>
+        <li class="commit"><span class="hash">3d2f0e9</span><div><p class="when" data-i18n="c.ibm1.when">aug 2022 · Morocco</p><h3 data-i18n="c.ibm1.t">Web developer intern, IBM</h3><p data-i18n="c.ibm1.d">A staff-management app in a pair, Symfony and Angular.</p></div><span class="branch">internship</span></li>
+        <li class="commit root"><span class="hash">0000001</span><div><p class="when" data-i18n="c.bts.when">2021 → 2023 · Casablanca</p><h3 data-i18n="c.bts.t">BTS, Information Systems Development</h3><p data-i18n="c.bts.d">Centre de BTS Abderrahman Ibn Ghazala. Initial commit.</p></div><span class="branch">studies</span></li>
+      </ol>
+    </section>
 
-  <section class="contact" id="contact" aria-labelledby="contactLine">
-    <p class="contact-line" id="contactLine" data-i18n="contact.line">Write to me about an internship, a project, or the best bretzel in Mulhouse.</p>
-    <a class="email" href="mailto:belmouaddine.ptech@gmail.com"><span>belmouaddine.ptech@</span><span>gmail.com</span></a>
-    <p class="contact-place" data-i18n="contact.place">Mulhouse, France. From Casablanca.</p>
-    <p class="contact-links"><a href="https://www.linkedin.com/in/meryem-belmouaddine" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/miaaa3" target="_blank" rel="noopener">GitHub</a><a href="assets/CV-Meryem-Belmouaddine.pdf" target="_blank" rel="noopener">CV</a></p>
-  </section>
-</main>
+    <!-- ================= ABOUT ================= -->
+    <section class="section about" id="about" data-file="about-casablanca.md">
+      <div class="about-text">
+        <p class="crumb">portfolio › about-casablanca.md</p>
+        <h2 data-i18n="about.title">Born in Casablanca, <em>coding in Mulhouse.</em></h2>
+        <p data-i18n="about.p1">I'm Meryem, everyone calls me Mia. I grew up in Casablanca, did a BTS and a professional bachelor's in Morocco, then moved to France: a bachelor's in La Rochelle, and now a Master's in Computer Science &amp; Mobility in Mulhouse.</p>
+        <p data-i18n="about.p2">I like projects that have to <b>work for real</b>: a teacher using my app in class, 15,000 cars that must not freeze the browser, a board-game AI that has to be a real opponent. I also built Bloom, my own Mac app, to track my grades, calendar and internship search.</p>
+        <p data-i18n="about.p3">Arabic is my first language, French is my daily one, English is my coding one.</p>
+      </div>
+      <figure class="polaroid big" style="--r:4deg"><span class="tape"></span><img src="assets/main-entrance-door-at-the-hassan-ii.jpg" alt="The main door of the Hassan II Mosque in Casablanca" width="1263" height="1600" loading="lazy"><figcaption class="cap" data-i18n="about.cap">home ✿ Casablanca</figcaption></figure>
+    </section>
 
-<footer class="foot">
-  <p class="foot-what" data-i18n="foot.what">Meryem Belmouaddine, developer</p>
-  <p class="foot-links"><a href="https://github.com/miaaa3" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/meryem-belmouaddine" target="_blank" rel="noopener">LinkedIn</a><button type="button" id="openTerm" data-i18n="foot.term">Open the terminal</button></p>
-  <p class="foot-year">© <span id="year">2026</span></p>
-  <p class="foot-credits" data-i18n="foot.credits">Pictures: Hassan II Mosque door by Tinuzzo (CC BY 4.0); La Rochelle, view of the port, c. 1905 (public domain); map of La Rochelle by Nicolas Chalmandrier, 1773, BnF Gallica (public domain); Bugatti Type 30 at the Cité de l'Automobile by Zairon (CC BY-SA 4.0); all via Wikimedia Commons. Streets © OpenStreetMap contributors (ODbL).</p>
+    <!-- ================= SKILLS ================= -->
+    <section class="section" id="skills" data-file="skills.json">
+      <header class="section-head">
+        <p class="crumb">portfolio › skills.json</p>
+        <h2 data-i18n="sk.title">What's in my <em>toolbox</em></h2>
+      </header>
+      <pre class="json" aria-label="Skills"><code>{
+  <span class="k">"every_day"</span>: [<span class="s">"Java"</span>, <span class="s">"TypeScript"</span>, <span class="s">"Angular"</span>, <span class="s">"Spring Boot"</span>, <span class="s">"REST"</span>, <span class="s">"MySQL"</span>, <span class="s">"Git"</span>, <span class="s">"Docker"</span>],
+  <span class="k">"in_projects"</span>: [<span class="s">"C++"</span>, <span class="s">"C"</span>, <span class="s">"OpenGL"</span>, <span class="s">"WebGL2"</span>, <span class="s">"MapLibre"</span>, <span class="s">"OpenCV"</span>, <span class="s">"Swift"</span>, <span class="s">"SwiftUI"</span>, <span class="s">"Python"</span>, <span class="s">"PHP"</span>, <span class="s">"Symfony"</span>, <span class="s">"React"</span>],
+  <span class="k">"ops"</span>: [<span class="s">"GitHub Actions"</span>, <span class="s">"Linux"</span>, <span class="s">"Maven"</span>, <span class="s">"CMake"</span>, <span class="s">"nginx"</span>],
+  <span class="k">"languages"</span>: { <span class="k">"arabic"</span>: <span class="s">"native"</span>, <span class="k">"french"</span>: <span class="s">"fluent"</span>, <span class="k">"english"</span>: <span class="s">"advanced"</span> },
+  <span class="k">"soft"</span>: [<span class="s">"autonomous"</span>, <span class="s">"curious"</span>, <span class="s">"team player"</span>, <span class="s">"stress-proof"</span>],
+  <span class="k">"coffee"</span>: <span class="n">Infinity</span>  <span class="c">// non-negotiable</span>
+}</code></pre>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section contact" id="contact" data-file="contact.sh">
+      <p class="crumb">portfolio › contact.sh</p>
+      <h2 data-i18n="contact.title">Let's build <em>something.</em></h2>
+      <p class="contact-sub" data-i18n="contact.sub">Looking for an intern from February 2027? Or want to talk maps, games or the best bretzel in Mulhouse? Write to me.</p>
+      <a class="email" href="mailto:belmouaddine.ptech@gmail.com">belmouaddine.ptech@gmail.com</a>
+      <div class="actions">
+        <a class="btn btn-violet" href="https://www.linkedin.com/in/meryem-belmouaddine" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/miaaa3" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-ghost" href="assets/CV-Meryem-Belmouaddine.pdf" target="_blank" rel="noopener" data-i18n="contact.cv">CV (PDF)</a>
+      </div>
+      <p class="credit" data-i18n="credit">Photo: main door of the Hassan II Mosque by Tinuzzo, CC BY 4.0, via Wikimedia Commons. Hand-written HTML, CSS and JS, no framework.</p>
+    </section>
+  </main>
+</div>
+
+<footer class="statusbar">
+  <span>⎇ main</span>
+  <span class="xp" title="XP"><span id="lvl">Lv 1</span><span class="xp-bar"><i id="xpFill"></i></span><span id="xpText" class="hide-sm">0 XP</span></span>
+  <span class="hide-sm" data-i18n="sb.bugs">✓ 0 bugs (that I know of)</span>
+  <span class="sb-right"><span id="sbLine">Ln 1, Col 1</span><span class="hide-sm">UTF-8</span><span id="sbCoffee">☕ 100%</span></span>
 </footer>
 
-<dialog class="sheet" id="sheet" aria-labelledby="sheetTitle">
-  <div class="sheet-inner">
-    <button class="sheet-close" type="button" id="sheetClose" data-i18n="close">Close</button>
-    <div class="sheet-media" id="sheetMedia"></div>
-    <div class="sheet-text" id="sheetText"></div>
-  </div>
+<dialog class="term" id="term" aria-label="Terminal">
+  <div class="term-bar"><span>TERMINAL</span><button type="button" id="termClose" aria-label="Close">×</button></div>
+  <pre class="term-out" id="termOut"></pre>
+  <form class="term-in" id="termForm" autocomplete="off"><label for="termInput">mia@mulhouse ~/portfolio $</label><input id="termInput" type="text" spellcheck="false" autocapitalize="off"></form>
 </dialog>
 
-<dialog class="term" id="term" data-ui aria-label="Terminal">
-  <pre class="term-out" id="termOut"></pre>
-  <form class="term-in" id="termForm" autocomplete="off"><label for="termInput"><code>mia@mulhouse:~$</code></label><input id="termInput" type="text" spellcheck="false" autocapitalize="off"></form>
+<dialog class="sheet" id="sheet" aria-labelledby="sheetTitle">
+  <div class="sheet-bar"><span class="tab" id="sheetTab">project</span><button type="button" id="sheetClose" aria-label="Close">×</button></div>
+  <div class="sheet-body"><div class="sheet-media" id="sheetMedia"></div><div class="sheet-text" id="sheetText"></div></div>
 </dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="js/projects.js"></script>
 <script src="js/i18n.js"></script>
-<script src="js/city.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
