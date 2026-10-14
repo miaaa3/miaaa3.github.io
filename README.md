@@ -5,9 +5,9 @@ Source of **[miaaa3.github.io](https://miaaa3.github.io)**: the portfolio of Mer
 Plain HTML/CSS/JS — no framework, no build step — hosted on GitHub Pages.
 
 - 🇬🇧/🇫🇷 language toggle (follows the browser language, remembered locally)
-- animated hero, scroll reveals, counters, timeline, sparkle cursor
+- dark Bloom palette, one accent colour, 8px spacing scale
 - project cards with autoplaying demo videos and a screenshot modal (`js/projects.js`)
-- a tiny interactive terminal easter egg — try `help`
+- a typed code editor in the hero and an interactive terminal (try `help`)
 - respects `prefers-reduced-motion`, keyboard accessible, responsive down to phone width
 
 ```bash
