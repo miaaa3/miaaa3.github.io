@@ -3,6 +3,8 @@ window.PROJECTS = [
   {
     id: 'nexus', featured: true, cat: 'web graphics', kind: 'master', year: '2026',
     title: 'NexusNexus',
+    short: { en: 'a city, live', fr: 'une ville, en direct' },
+    strip: [['nexus/loop.mp4',608],['nexus/4.jpg',754],['nexus/6.jpg',450],['nexus/5.jpg',764],['nexus/3.jpg',608]],
     role: { en: "Master's project · UHA · solo", fr: 'Projet de master · UHA · seule' },
     figures: [{ v: { en: '15,000+', fr: '15 000+' }, l: { en: 'vehicles at 60 FPS', fr: 'véhicules à 60 FPS' } }, { v: '<100 ms', l: { en: 'WebSocket latency', fr: 'latence WebSocket' } }, { v: '~5×', l: { en: 'less data with delta frames', fr: 'moins de données (deltas)' } }],
     desc: {
@@ -22,6 +24,8 @@ window.PROJECTS = [
   {
     id: 'v2v', featured: true, cat: 'graphics systems', kind: 'master', year: '2026',
     title: 'V2V Simulator',
+    short: { en: 'cars that talk', fr: 'des voitures qui se parlent' },
+    strip: [['v2v/1.jpg',688],['v2v/4.jpg',306],['v2v/2.jpg',676],['v2v/5.jpg',676],['v2v/3.jpg',676]],
     role: { en: "Master's project · UHA · with M. Chouadra", fr: 'Projet de master · UHA · avec M. Chouadra' },
     figures: [{ v: { en: '19,000', fr: '19 000' }, l: { en: 'vehicles simulated', fr: 'véhicules simulés' } }, { v: '120 FPS', l: { en: 'on a MacBook M2', fr: 'sur MacBook M2' } }, { v: { en: '~3.6 ms', fr: '~3,6 ms' }, l: { en: 'per frame', fr: 'par image' } }],
     desc: {
@@ -41,6 +45,8 @@ window.PROJECTS = [
   {
     id: 'lingobingo', featured: true, cat: 'web', kind: 'intern', year: '2025',
     title: 'LingoBingo',
+    short: { en: 'quizzes, but fun', fr: 'des quiz, mais drôles' },
+    strip: [['lingobingo/01-welcome.jpg',608],['lingobingo/10-student-dashboard.jpg',608],['lingobingo/12-flashcard.jpg',608],['lingobingo/02-teacher-dashboard.jpg',608],['lingobingo/08-generate.jpg',608],['lingobingo/13-practice.jpg',608]],
     role: { en: 'Internship · La Rochelle University', fr: 'Stage · La Rochelle Université' },
     figures: [{ v: '2', l: { en: 'sides: teachers and students', fr: 'côtés : profs et étudiants' } }, { v: '1', l: { en: 'Docker command to run it all', fr: 'commande Docker pour tout lancer' } }, { v: '0', l: { en: 'quiz answers sent to the browser', fr: 'réponse envoyée au navigateur' } }],
     desc: {
@@ -60,6 +66,8 @@ window.PROJECTS = [
   {
     id: 'helpinghands', featured: true, cat: 'web', kind: 'intern', year: '2023 – 2026',
     title: 'HelpingHands',
+    short: { en: 'volunteering, as an app', fr: 'le bénévolat, en appli' },
+    strip: [['helpinghands/01-welcome.jpg',608],['helpinghands/03-home-feed.jpg',608],['helpinghands/04-opportunities.jpg',608],['helpinghands/05-messages.jpg',608],['helpinghands/08-org-dashboard.jpg',608],['helpinghands/09-admin.jpg',608]],
     role: { en: 'Started at IBM · rebuilt independently', fr: 'Commencé chez IBM · reconstruit ensuite' },
     figures: [{ v: '3', l: { en: 'role dashboards', fr: 'tableaux de bord par rôle' } }, { v: 'Live', l: { en: 'chat over WebSocket', fr: 'chat en WebSocket' } }, { v: 'CI', l: { en: 'GitHub Actions on every push', fr: 'GitHub Actions à chaque push' } }],
     desc: {
@@ -79,6 +87,8 @@ window.PROJECTS = [
   {
     id: 'klosnowo', cat: 'systems', kind: 'school', year: '2026',
     title: 'Klosnowo',
+    short: { en: 'a game in C', fr: 'un jeu en C' },
+    strip: [['klosnowo/3.jpg',1020],['klosnowo/24.jpg',1020]],
     role: { en: 'School project · ENSISA Immersion 2026', fr: 'Projet d\u2019école · ENSISA Immersion 2026' },
     figures: [{ v: '4', l: { en: 'game modes', fr: 'modes de jeu' } }, { v: 'depth 4', l: { en: 'Minimax + alpha-beta', fr: 'Minimax + alpha-bêta' } }, { v: '0', l: { en: 'dependencies', fr: 'dépendance' } }],
     desc: {
@@ -98,6 +108,8 @@ window.PROJECTS = [
   {
     id: 'lbp', cat: 'systems', kind: 'master', year: '2026',
     title: 'LBP Parking Classifier',
+    short: { en: 'free or taken?', fr: 'libre ou occupée ?' },
+    strip: [['lbp/1.jpg',710],['lbp/3.jpg',396],['lbp/2.jpg',1378],['lbp/4.jpg',1138]],
     role: { en: "Master's lab · UHA · extended", fr: 'TP de master · UHA · enrichi' },
     figures: [{ v: { en: '94.5%', fr: '94,5 %' }, l: { en: 'accuracy on unseen images', fr: 'de réussite sur images inédites' } }, { v: '6', l: { en: 'distances compared', fr: 'distances comparées' } }, { v: '+2 pts', l: { en: 'from data augmentation', fr: 'grâce à l\u2019augmentation' } }],
     desc: {
@@ -117,6 +129,8 @@ window.PROJECTS = [
   {
     id: 'togetherly', cat: 'web', kind: 'team', year: '2023',
     title: 'Togetherly',
+    short: { en: 'a social network', fr: 'un réseau social' },
+    strip: [['togetherly/1.jpg',668],['togetherly/4.jpg',208],['togetherly/8.jpg',676],['togetherly/5.jpg',178],['togetherly/11.jpg',198]],
     role: { en: 'Team project · with Fattah Amil', fr: 'Projet d\u2019équipe · avec Fattah Amil' },
     figures: [{ v: '3', l: { en: 'roles with JWT', fr: 'rôles avec JWT' } }, { v: 'Live', l: { en: 'chat between friends', fr: 'chat entre amis' } }],
     desc: {
