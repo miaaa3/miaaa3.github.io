@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Klosnowo · Mia OS</title>
+<meta name="description" content="A Tafl-style strategy game for two players on an 11 × 7 board, in pure C11. Play on one keyboard, against a Minimax AI, or over the network, in an animated terminal.">
+<meta name="theme-color" content="#141019">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://miaaa3.github.io/work/klosnowo/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Klosnowo: A board game in C, with an AI that fights back.">
+<meta property="og:description" content="A Tafl-style strategy game for two players on an 11 × 7 board, in pure C11. Play on one keyboard, against a Minimax AI, or over the network, in an animated terminal.">
+<meta property="og:image" content="https://miaaa3.github.io/assets/projects/klosnowo/cover.jpg">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600&family=Outfit:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body data-case="klosnowo" data-root="../../">
+<header class="titlebar">
+  <div class="lights" aria-hidden="true"><i></i><i></i><i></i></div>
+  <a class="titlebar-name" href="../../">mia-os <span>~/portfolio/projects/klosnowo.c</span></a>
+  <nav class="topnav" aria-label="Sections">
+    <a href="../../#projects" data-i18n="nav.work">projects</a>
+    <a href="../../#experience" data-i18n="nav.exp">experience</a>
+    <a href="../../#about" data-i18n="nav.about">about</a>
+    <a href="../../#contact" data-i18n="nav.contact">contact</a>
+    <button type="button" id="openTerm">&gt;_ <span data-i18n="nav.term">terminal</span></button>
+  </nav>
+  <div class="titlebar-actions">
+    <button type="button" class="pill" id="langBtn" data-i18n="lang">FR</button>
+    <a class="pill pill-rose" href="../../assets/CV-Meryem-Belmouaddine.pdf" target="_blank" rel="noopener">cv.pdf ↓</a>
+  </div>
+</header>
+
+<main class="case" id="case">
+  <noscript><h1>Klosnowo</h1><p>A Tafl-style strategy game for two players on an 11 × 7 board, in pure C11. Play on one keyboard, against a Minimax AI, or over the network, in an animated terminal.</p><p><a href="https://github.com/miaaa3/klosnowo">Code on GitHub</a></p></noscript>
+</main>
+
+<footer class="statusbar">
+  <span>⎇ main</span>
+  <span class="hide-sm">klosnowo.c</span>
+  <span class="sb-right"><span id="sbLine">Ln 1, Col 1</span><span class="hide-sm">UTF-8</span><span id="sbCoffee">☕ 100%</span></span>
+</footer>
+
+<dialog class="term" id="term" aria-label="Terminal">
+  <div class="term-bar"><span>TERMINAL</span><button type="button" id="termClose" aria-label="Close">×</button></div>
+  <pre class="term-out" id="termOut"></pre>
+  <form class="term-in" id="termForm" autocomplete="off"><label for="termInput">mia@mulhouse ~/portfolio $</label><input id="termInput" type="text" spellcheck="false" autocapitalize="off"></form>
+</dialog>
+
+<script src="../../js/projects.js"></script>
+<script src="../../js/i18n.js"></script>
+<script src="../../js/cases.js"></script>
+<script src="../../js/main.js"></script>
+</body>
+</html>

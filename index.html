@@ -26,32 +26,21 @@
 
 <header class="titlebar">
   <div class="lights" aria-hidden="true"><i></i><i></i><i></i></div>
-  <a class="titlebar-name" href="#readme">mia-os <span>— ~/portfolio</span></a>
+  <a class="titlebar-name" href="#readme">mia-os <span>~/portfolio</span></a>
+  <nav class="topnav" aria-label="Sections">
+    <a href="#projects" data-i18n="nav.work">projects</a>
+    <a href="#experience" data-i18n="nav.exp">experience</a>
+    <a href="#about" data-i18n="nav.about">about</a>
+    <a href="#contact" data-i18n="nav.contact">contact</a>
+    <button type="button" id="openTerm">&gt;_ <span data-i18n="nav.term">terminal</span></button>
+  </nav>
   <div class="titlebar-actions">
     <button type="button" class="pill" id="langBtn" data-i18n="lang">FR</button>
     <a class="pill pill-rose" href="assets/CV-Meryem-Belmouaddine.pdf" target="_blank" rel="noopener">cv.pdf ↓</a>
   </div>
 </header>
 
-<div class="os">
-  <nav class="explorer" aria-label="Sections">
-    <p class="explorer-title" data-i18n="explorer">explorer</p>
-    <a href="#readme" class="file"><b class="ic md">MD</b>README.md</a>
-    <a href="#projects" class="file folder"><b class="ic dir">▾</b>projects/</a>
-    <div class="sub" id="projectFiles"></div>
-    <a href="#experience" class="file"><b class="ic log">LOG</b>experience.log</a>
-    <a href="#about" class="file"><b class="ic fl">✿</b>about-casablanca.md</a>
-    <a href="#skills" class="file"><b class="ic js">{}</b>skills.json</a>
-    <a href="#contact" class="file"><b class="ic sh">SH</b>contact.sh</a>
-    <button type="button" class="file" id="openTerm"><b class="ic sh">&gt;_</b><span data-i18n="explorer.term">terminal</span></button>
-    <div class="quest">
-      <p class="explorer-title"><span data-i18n="quest.title">achievements</span> <span id="achCount">0/8</span></p>
-      <ul id="achList"></ul>
-    </div>
-  </nav>
-
-  <main class="editor" id="main">
-    <div class="tabs" aria-hidden="true"><span class="tab" id="currentTab">README.md</span></div>
+<main class="editor" id="main">
 
     <!-- ================= README ================= -->
     <section class="readme" id="readme" data-file="README.md">
@@ -68,9 +57,9 @@
       </div>
 
       <div class="desk" id="desk" aria-label="Project polaroids and stickers">
-        <a class="polaroid drag" href="#p-nexus" style="--x:4%;--y:4%;--r:-5deg;--w:58%"><span class="tape"></span><img src="assets/strips/nexus/1.jpg" alt="NexusNexus: thousands of cars on La Rochelle's streets" width="608" height="380"><span class="cap">NexusNexus · 15k cars</span></a>
-        <a class="polaroid drag" href="#p-lingobingo" style="--x:40%;--y:22%;--r:6deg;--w:56%"><span class="tape"></span><img src="assets/strips/lingobingo/01-welcome.jpg" alt="LingoBingo landing page" width="608" height="380"><span class="cap" data-i18n="pol.lingo">LingoBingo · for a real teacher</span></a>
-        <a class="polaroid drag" href="#p-v2v" style="--x:10%;--y:52%;--r:3deg;--w:52%"><img src="assets/strips/v2v/1.jpg" alt="V2V Simulator dashboard" width="688" height="380"><span class="cap" data-i18n="pol.v2v">V2V · 19,000 cars talking</span></a>
+        <a class="polaroid drag" href="work/nexusnexus/" style="--x:4%;--y:4%;--r:-5deg;--w:58%"><span class="tape"></span><img src="assets/strips/nexus/1.jpg" alt="NexusNexus: thousands of cars on La Rochelle's streets" width="608" height="380"><span class="cap">NexusNexus · 15k cars</span></a>
+        <a class="polaroid drag" href="work/lingobingo/" style="--x:40%;--y:22%;--r:6deg;--w:56%"><span class="tape"></span><img src="assets/strips/lingobingo/01-welcome.jpg" alt="LingoBingo landing page" width="608" height="380"><span class="cap" data-i18n="pol.lingo">LingoBingo · for a real teacher</span></a>
+        <a class="polaroid drag" href="work/v2v-simulator/" style="--x:10%;--y:52%;--r:3deg;--w:52%"><img src="assets/strips/v2v/1.jpg" alt="V2V Simulator dashboard" width="688" height="380"><span class="cap" data-i18n="pol.v2v">V2V · 19,000 cars talking</span></a>
         <span class="sticker s-casa drag" style="--x:74%;--y:0%;--r:-12deg" data-i18n="st.casa">made in<br>casa ✦<br>mulhouse</span>
         <span class="sticker s-intern drag" style="--x:0%;--y:44%;--r:8deg" data-i18n="st.intern">4 internships</span>
         <span class="sticker s-code drag" style="--x:36%;--y:1%;--r:-5deg">console.log("hire me")</span>
@@ -88,7 +77,7 @@
       <header class="section-head">
         <p class="crumb">portfolio › projects/</p>
         <h2 data-i18n="proj.title">Things I've <em>built</em></h2>
-        <p data-i18n="proj.sub">Seven projects, all open source and documented. Click a polaroid for screenshots and the full story.</p>
+        <p data-i18n="proj.sub">Seven projects, all open source and documented. Each one has its own case study.</p>
         <div class="filters" role="group" aria-label="Filter">
           <button type="button" data-filter="all" aria-pressed="true" data-i18n="f.all">all</button>
           <button type="button" data-filter="web" aria-pressed="false" data-i18n="f.web">web apps</button>
@@ -161,11 +150,9 @@
       <p class="credit" data-i18n="credit">Photo: main door of the Hassan II Mosque by Tinuzzo, CC BY 4.0, via Wikimedia Commons. Hand-written HTML, CSS and JS, no framework.</p>
     </section>
   </main>
-</div>
 
 <footer class="statusbar">
   <span>⎇ main</span>
-  <span class="xp" title="XP"><span id="lvl">Lv 1</span><span class="xp-bar"><i id="xpFill"></i></span><span id="xpText" class="hide-sm">0 XP</span></span>
   <span class="hide-sm" data-i18n="sb.bugs">✓ 0 bugs (that I know of)</span>
   <span class="sb-right"><span id="sbLine">Ln 1, Col 1</span><span class="hide-sm">UTF-8</span><span id="sbCoffee">☕ 100%</span></span>
 </footer>
@@ -176,14 +163,10 @@
   <form class="term-in" id="termForm" autocomplete="off"><label for="termInput">mia@mulhouse ~/portfolio $</label><input id="termInput" type="text" spellcheck="false" autocapitalize="off"></form>
 </dialog>
 
-<dialog class="sheet" id="sheet" aria-labelledby="sheetTitle">
-  <div class="sheet-bar"><span class="tab" id="sheetTab">project</span><button type="button" id="sheetClose" aria-label="Close">×</button></div>
-  <div class="sheet-body"><div class="sheet-media" id="sheetMedia"></div><div class="sheet-text" id="sheetText"></div></div>
-</dialog>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="js/projects.js"></script>
 <script src="js/i18n.js"></script>
+<script src="js/cases.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -2,9 +2,7 @@
 window.I18N_FR = {
   'skip': 'Aller au contenu',
   'lang': 'EN',
-  'explorer': 'explorateur',
-  'explorer.term': 'terminal',
-  'quest.title': 'succès',
+  'nav.work': 'projets', 'nav.exp': 'parcours', 'nav.about': 'à propos', 'nav.contact': 'contact', 'nav.term': 'terminal',
   'hero.status': 'dispo pour un stage de 6 mois · dès février 2027',
   'hero.title': 'Salut, moi c’est Mia.<br>Je livre des applis <em>de bout en bout.</em>',
   'hero.lead': '<b>Meryem Belmouaddine</b>, développeuse full-stack &amp; mobile née à Casablanca, en Master à Mulhouse. J’ai construit une ville de 15 000 voitures en direct dans un navigateur, un simulateur C++ de 19 000 véhicules, et des applis utilisées par de vrais profs.',
@@ -46,24 +44,11 @@ window.I18N_FR = {
 
 window.UI = {
   en: {
-    code: 'code', details: 'details', demo: 'demo ▶',
-    kinds: { master: "master's project", intern: 'internship', school: 'school project', team: 'team project' },
-    unlocked: 'ACHIEVEMENT UNLOCKED', levelUp: n => `LEVEL UP · Lv ${n}`,
-    levels: ['visitor', 'curious', 'explorer', 'fan', 'recruiter'],
-    ach: {
-      boot: ['Hello world', 'opened Mia OS'],
-      project: ['Code reviewer', 'opened a project'],
-      drag: ['Interior designer', 'moved a sticker'],
-      log: ['Historian', 'read the whole git log'],
-      term: ['Hacker voice: I’m in', 'found the terminal'],
-      sudo: ['Nice try', 'tried sudo'],
-      lang: ['Bilingue', 'switched language'],
-      contact: ['Almost hired', 'reached contact.sh']
-    },
-    final: 'All 8 achievements! Reward: hire Mia → belmouaddine.ptech@gmail.com',
+    caseStudy: 'read the case study', code: 'code', back: 'back to projects', problem: 'the problem', hard: 'three hard problems',
+    how: 'how it works', screens: 'screenshots', stack: 'stack', links: 'links', ask: 'ask me about it', next: 'next project',
     term: {
       welcome: 'Mia OS terminal. Type <b>help</b>.',
-      help: 'whoami · internship · projects · ls · cv · contact · coffee · joke · achievements · sudo · lang · clear · exit',
+      help: 'whoami · internship · projects · ls · cv · contact · coffee · joke · sudo · lang · clear · exit',
       whoami: 'meryem belmouaddine (mia) · casablanca → la rochelle → mulhouse · full-stack & mobile developer',
       internship: '6 months · from feb 2027 · on site · alsace first, anywhere in france works',
       ls: 'README.md  projects/  experience.log  about-casablanca.md  skills.json  contact.sh  cv.pdf',
@@ -77,24 +62,11 @@ window.UI = {
     }
   },
   fr: {
-    code: 'code', details: 'détails', demo: 'démo ▶',
-    kinds: { master: 'projet de master', intern: 'stage', school: 'projet d’école', team: 'projet d’équipe' },
-    unlocked: 'SUCCÈS DÉBLOQUÉ', levelUp: n => `NIVEAU SUPÉRIEUR · Niv. ${n}`,
-    levels: ['visiteur', 'curieux', 'explorateur', 'fan', 'recruteur'],
-    ach: {
-      boot: ['Hello world', 'a ouvert Mia OS'],
-      project: ['Relecteur de code', 'a ouvert un projet'],
-      drag: ['Déco d’intérieur', 'a déplacé un sticker'],
-      log: ['Historien', 'a lu tout le git log'],
-      term: ['Mode hacker', 'a trouvé le terminal'],
-      sudo: ['Bien essayé', 'a tenté sudo'],
-      lang: ['Bilingual', 'a changé de langue'],
-      contact: ['Presque embauchée', 'est arrivé à contact.sh']
-    },
-    final: 'Les 8 succès ! Récompense : embaucher Mia → belmouaddine.ptech@gmail.com',
+    caseStudy: 'lire l\u2019étude de cas', code: 'code', back: 'retour aux projets', problem: 'le problème', hard: 'trois problèmes difficiles',
+    how: 'comment ça marche', screens: 'captures', stack: 'stack', links: 'liens', ask: 'm\u2019en parler', next: 'projet suivant',
     term: {
       welcome: 'Terminal Mia OS. Tape <b>help</b>.',
-      help: 'whoami · internship · projects · ls · cv · contact · coffee · joke · achievements · sudo · lang · clear · exit',
+      help: 'whoami · internship · projects · ls · cv · contact · coffee · joke · sudo · lang · clear · exit',
       whoami: 'meryem belmouaddine (mia) · casablanca → la rochelle → mulhouse · développeuse full-stack & mobile',
       internship: '6 mois · dès fév. 2027 · sur site · l’alsace d’abord, partout en france sinon',
       ls: 'README.md  projects/  experience.log  about-casablanca.md  skills.json  contact.sh  cv.pdf',
