@@ -48,32 +48,33 @@
   }
 
   /* ============ projects ============ */
-  function card(p) {
+  const pad = n => String(n).padStart(2, '0');
+  function entry(p, i, total) {
     return `
-      <article class="card reveal" data-cat="${p.cat}">
+      <article class="entry reveal" data-cat="${p.cat}">
+        <div class="idx">${pad(i + 1)} / ${pad(total)}</div>
+        <div class="entry-text">
+          <p class="role-line">${esc(pick(p.role))} · ${p.year}</p>
+          <h3>${p.title}</h3>
+          <p class="desc">${pick(p.desc)}</p>
+          <div class="figures">${p.figures.map(f => `<div><b>${esc(pick(f.v))}</b><span>${esc(pick(f.l))}</span></div>`).join('')}</div>
+          <div class="tags">${p.tags.map(x => `<span class="tag">${x}</span>`).join('')}</div>
+          <div class="entry-links">
+            <button type="button" class="btn btn-secondary btn-sm" data-open="${p.id}">${t().details}${icon('arrow')}</button>
+            <a class="text-link" href="${p.repo}" target="_blank" rel="noopener">${icon('github')}${t().code}</a>
+          </div>
+        </div>
         <button type="button" class="media" data-open="${p.id}" aria-label="${esc(p.title)}: ${t().details}">
           <img src="${p.cover}" alt="" loading="lazy" decoding="async">
           ${p.video ? `<video muted loop playsinline preload="none" poster="${p.cover}" data-src="${p.video}"></video>` : ''}
           <span class="media-hint">${p.video ? t().watch : t().screens} ↗</span>
         </button>
-        <div class="card-body">
-          <div class="card-top"><span class="kind">${t().kinds[p.kind]}</span><span class="year">${p.year}</span></div>
-          <h3 class="h3">${p.title}</h3>
-          <p class="desc">${pick(p.desc)}</p>
-          <p class="metric-line">${esc(pick(p.metric))}</p>
-          <div class="tags">${p.tags.map(x => `<span class="tag">${x}</span>`).join('')}</div>
-          <div class="card-links">
-            <a class="text-link" href="${p.repo}" target="_blank" rel="noopener">${icon('github')}${t().code}</a>
-            <button type="button" class="text-link" data-open="${p.id}">${t().details}${icon('arrow')}</button>
-          </div>
-        </div>
       </article>`;
   }
 
   let videoObserver, currentFilter = 'all';
   function renderProjects() {
-    $('#featured').innerHTML = PROJECTS.filter(p => p.featured).map(card).join('');
-    $('#more').innerHTML = PROJECTS.filter(p => !p.featured).map(card).join('');
+    $('#work').innerHTML = PROJECTS.map((p, i) => entry(p, i, PROJECTS.length)).join('');
     applyFilter(currentFilter);
     observeReveal($$('#projects .reveal'));
     if (videoObserver) videoObserver.disconnect();
@@ -91,7 +92,7 @@
   function applyFilter(f) {
     currentFilter = f;
     $$('.filters button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.filter === f)));
-    $$('.card').forEach(c => c.classList.toggle('hidden', !(f === 'all' || c.dataset.cat.split(' ').includes(f))));
+    $$('.entry').forEach(c => c.classList.toggle('hidden', !(f === 'all' || c.dataset.cat.split(' ').includes(f))));
   }
   $$('.filters button').forEach(b => b.addEventListener('click', () => applyFilter(b.dataset.filter)));
 

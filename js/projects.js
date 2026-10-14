@@ -3,6 +3,8 @@ window.PROJECTS = [
   {
     id: 'nexus', featured: true, cat: 'web graphics', kind: 'master', year: '2026',
     title: 'NexusNexus',
+    role: { en: "Master's project · UHA · solo", fr: 'Projet de master · UHA · seule' },
+    figures: [{ v: { en: '15,000+', fr: '15 000+' }, l: { en: 'vehicles at 60 FPS', fr: 'véhicules à 60 FPS' } }, { v: '<100 ms', l: { en: 'WebSocket latency', fr: 'latence WebSocket' } }, { v: '~5×', l: { en: 'less data with delta frames', fr: 'moins de données (deltas)' } }],
     desc: {
       en: 'Real-time smart-city traffic platform. Thousands of vehicles drive on the real streets of La Rochelle, streamed live to a WebGL dashboard with neighbourhood analytics.',
       fr: 'Plateforme de trafic de smart city en temps réel. Des milliers de véhicules roulent dans les vraies rues de La Rochelle, diffusés en direct vers un tableau de bord WebGL avec des analyses par quartier.'
@@ -20,6 +22,8 @@ window.PROJECTS = [
   {
     id: 'v2v', featured: true, cat: 'graphics systems', kind: 'master', year: '2026',
     title: 'V2V Simulator',
+    role: { en: "Master's project · UHA · with M. Chouadra", fr: 'Projet de master · UHA · avec M. Chouadra' },
+    figures: [{ v: { en: '19,000', fr: '19 000' }, l: { en: 'vehicles simulated', fr: 'véhicules simulés' } }, { v: '120 FPS', l: { en: 'on a MacBook M2', fr: 'sur MacBook M2' } }, { v: { en: '~3.6 ms', fr: '~3,6 ms' }, l: { en: 'per frame', fr: 'par image' } }],
     desc: {
       en: 'Vehicle-to-vehicle communication simulator in C++/OpenGL. Cars drive on any OpenStreetMap city and form a live radio network you can watch and inspect.',
       fr: 'Simulateur de communication véhicule-à-véhicule en C++/OpenGL. Les voitures roulent sur n’importe quelle ville OpenStreetMap et forment un réseau radio vivant, observable et inspectable.'
@@ -37,6 +41,8 @@ window.PROJECTS = [
   {
     id: 'lingobingo', featured: true, cat: 'web', kind: 'intern', year: '2025',
     title: 'LingoBingo',
+    role: { en: 'Internship · La Rochelle University', fr: 'Stage · La Rochelle Université' },
+    figures: [{ v: '2', l: { en: 'sides: teachers and students', fr: 'côtés : profs et étudiants' } }, { v: '1', l: { en: 'Docker command to run it all', fr: 'commande Docker pour tout lancer' } }, { v: '0', l: { en: 'quiz answers sent to the browser', fr: 'réponse envoyée au navigateur' } }],
     desc: {
       en: 'Learning platform built during my internship at La Rochelle University: Quizlet-style flashcards and Kahoot-style live quizzes, for teachers and students.',
       fr: 'Plateforme d’apprentissage réalisée pendant mon stage à La Rochelle Université : cartes mémoire façon Quizlet et quiz en direct façon Kahoot, pour profs et étudiants.'
@@ -54,6 +60,8 @@ window.PROJECTS = [
   {
     id: 'helpinghands', featured: true, cat: 'web', kind: 'intern', year: '2023 – 2026',
     title: 'HelpingHands',
+    role: { en: 'Started at IBM · rebuilt independently', fr: 'Commencé chez IBM · reconstruit ensuite' },
+    figures: [{ v: '3', l: { en: 'role dashboards', fr: 'tableaux de bord par rôle' } }, { v: 'Live', l: { en: 'chat over WebSocket', fr: 'chat en WebSocket' } }, { v: 'CI', l: { en: 'GitHub Actions on every push', fr: 'GitHub Actions à chaque push' } }],
     desc: {
       en: 'Volunteering social network started during my IBM internship, then rebuilt. Volunteers find missions and chat with organisations; admins verify and moderate.',
       fr: 'Réseau social du bénévolat commencé pendant mon stage chez IBM, puis reconstruit. Les bénévoles trouvent des missions et discutent avec les associations ; les admins vérifient et modèrent.'
@@ -71,6 +79,8 @@ window.PROJECTS = [
   {
     id: 'klosnowo', cat: 'systems', kind: 'school', year: '2026',
     title: 'Klosnowo',
+    role: { en: 'School project · ENSISA Immersion 2026', fr: 'Projet d\u2019école · ENSISA Immersion 2026' },
+    figures: [{ v: '4', l: { en: 'game modes', fr: 'modes de jeu' } }, { v: 'depth 4', l: { en: 'Minimax + alpha-beta', fr: 'Minimax + alpha-bêta' } }, { v: '0', l: { en: 'dependencies', fr: 'dépendance' } }],
     desc: {
       en: 'Strategy board game in pure C, played in the terminal against a friend, a Minimax AI, or over the network.',
       fr: 'Jeu de plateau de stratégie en C pur, dans le terminal, contre un ami, une IA Minimax ou en réseau.'
@@ -88,6 +98,8 @@ window.PROJECTS = [
   {
     id: 'lbp', cat: 'systems', kind: 'master', year: '2026',
     title: 'LBP Parking Classifier',
+    role: { en: "Master's lab · UHA · extended", fr: 'TP de master · UHA · enrichi' },
+    figures: [{ v: { en: '94.5%', fr: '94,5 %' }, l: { en: 'accuracy on unseen images', fr: 'de réussite sur images inédites' } }, { v: '6', l: { en: 'distances compared', fr: 'distances comparées' } }, { v: '+2 pts', l: { en: 'from data augmentation', fr: 'grâce à l\u2019augmentation' } }],
     desc: {
       en: 'Computer vision without deep learning: a hand-written texture descriptor decides whether a parking spot is free.',
       fr: 'Vision par ordinateur sans deep learning : un descripteur de texture écrit à la main décide si une place de parking est libre.'
@@ -105,6 +117,8 @@ window.PROJECTS = [
   {
     id: 'togetherly', cat: 'web', kind: 'team', year: '2023',
     title: 'Togetherly',
+    role: { en: 'Team project · with Fattah Amil', fr: 'Projet d\u2019équipe · avec Fattah Amil' },
+    figures: [{ v: '3', l: { en: 'roles with JWT', fr: 'rôles avec JWT' } }, { v: 'Live', l: { en: 'chat between friends', fr: 'chat entre amis' } }],
     desc: {
       en: 'Team project with Fattah Amil: a social network with roles, posts, follows that become friendships, and real-time chat.',
       fr: 'Projet d’équipe avec Fattah Amil : un réseau social avec rôles, posts, abonnements qui deviennent des amitiés, et chat temps réel.'

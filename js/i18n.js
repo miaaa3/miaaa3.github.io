@@ -4,11 +4,12 @@ window.I18N_FR = {
   'nav.projects': 'Projets', 'nav.exp': 'Parcours', 'nav.skills': 'Compétences', 'nav.about': 'À propos', 'nav.contact': 'Contact', 'nav.cv': 'CV',
 
   'hero.status': 'Disponible pour un <b>stage de 6 mois</b> dès février 2027',
-  'hero.role': '<b>Développeuse full-stack &amp; mobile.</b> M2 Informatique et Mobilité à l’Université de Haute-Alsace.',
-  'hero.lead': 'Je construis des produits complets, de l’API Spring Boot jusqu’à l’écran Angular, et j’aime les parties difficiles : cartes temps réel, simulations, graphisme.',
+  'hero.title': 'Je construis des applis de bout en bout, <em class="hl">de l\u2019API au dernier pixel.</em>',
+  'hero.lead': 'Développeuse full-stack, M2 Informatique et Mobilité à l\u2019Université de Haute-Alsace. Quatre stages (IBM ×2, AGILTEEM, La Rochelle Université), une ville WebGL de 15 000 voitures en direct, et un simulateur C++ qui fait rouler 19 000 véhicules à 120 FPS.',
+  'tl.k': 'le fil rouge',
+  'tl.v': 'Je prends quelque chose de réel et de désordonné (le cours d\u2019un prof, le réseau routier d\u2019une ville, une communauté de bénévoles) et j\u2019en fais un logiciel que les gens utilisent vraiment.',
   'hero.cta1': 'Voir mes projets', 'hero.cta2': 'Télécharger mon CV',
 
-  'm.1': 'stages réalisés', 'm.2': 'véhicules à 120 FPS (C++)', 'm.3': 'pour diffuser 15K voitures au navigateur', 'm.4': 'projets open source',
 
   'proj.title': 'Projets choisis',
   'proj.sub': 'Tous open source, documentés et lançables. Ouvrez-en un pour les captures et les détails.',
@@ -45,8 +46,8 @@ window.I18N_FR = {
   'f.mode.k': 'mode', 'f.mode.v': 'Sur site, Alsace en priorité',
   'f.fuel.k': 'carburant', 'f.fuel.v': 'Latte avoine, double shot',
 
-  'contact.title': 'Vous cherchez une stagiaire qui livre ? Parlons-en.',
-  'contact.text': 'Je suis disponible pour un stage de fin d’études de 6 mois à partir de février 2027.',
+  'contact.title': 'Disponible pour un stage de 6 mois dès février 2027, <em class="hl">en Alsace ou partout en France.</em>',
+  'contact.text': 'Stage de fin d\u2019études, sur site. Chaque projet ci-dessus est livré avec son code et une démo.',
   'contact.copy': 'cliquer pour copier', 'contact.cv': 'CV (PDF)',
   'footer': '// HTML, CSS et JS écrits à la main. sans framework, sans template.',
   'footer.top': 'retour en haut ↑'

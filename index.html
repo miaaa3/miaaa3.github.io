@@ -18,7 +18,7 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Meryem Belmouaddine","jobTitle":"Full-stack & mobile developer","url":"https://miaaa3.github.io/",
@@ -43,8 +43,8 @@
 
 <header class="nav" id="nav">
   <div class="container">
-    <a href="#top" class="brand" aria-label="Meryem Belmouaddine, back to top"><span class="p">~/</span>meryem<span class="cur" aria-hidden="true"></span></a>
-    <nav aria-label="Main">
+    <a href="#top" class="brand" aria-label="Meryem Belmouaddine, back to top"><span class="mark" aria-hidden="true">mb</span><span class="name">Meryem Belmouaddine</span></a>
+    <nav aria-label="Main" class="nav-pill">
       <ul class="nav-links" id="navLinks">
         <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
         <li><a href="#experience" data-i18n="nav.exp">Experience</a></li>
@@ -70,9 +70,8 @@
   <div class="container">
     <div>
       <p class="status"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.status">Available for a <b>6-month internship</b> from Feb 2027</span></p>
-      <h1 class="h1">Meryem Belmouaddine</h1>
-      <p class="role" data-i18n="hero.role"><b>Full-stack &amp; mobile developer.</b> M2 Computer Science &amp; Mobility at Université de Haute-Alsace.</p>
-      <p class="lead" data-i18n="hero.lead">I build complete products, from the Spring Boot API to the Angular screen, and I like the hard parts: real-time maps, simulations, graphics.</p>
+      <h1 data-i18n="hero.title">I build apps end to end, <em class="hl">from the API to the last pixel.</em></h1>
+      <p class="lead" data-i18n="hero.lead">Full-stack developer, M2 Computer Science &amp; Mobility at Université de Haute-Alsace. Four internships (IBM ×2, AGILTEEM, La Rochelle University), a WebGL city of 15,000 live cars, and a C++ simulator running 19,000 vehicles at 120 FPS.</p>
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary"><span data-i18n="hero.cta1">View my projects</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
         <a href="assets/CV-Meryem-Belmouaddine.pdf" class="btn btn-secondary" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-down"/></svg><span data-i18n="hero.cta2">Download CV</span></a>
@@ -92,14 +91,12 @@
   </div>
 </section>
 
-<div class="metrics">
+<section class="throughline" aria-label="Approach">
   <div class="container">
-    <div class="metric"><div class="num"><span class="count" data-to="4">4</span></div><div class="lbl" data-i18n="m.1">internships shipped</div></div>
-    <div class="metric"><div class="num"><span class="count" data-to="19000">19,000</span></div><div class="lbl" data-i18n="m.2">vehicles at 120 FPS (C++)</div></div>
-    <div class="metric"><div class="num">&lt;<span class="count" data-to="100">100</span><small>ms</small></div><div class="lbl" data-i18n="m.3">to stream 15K cars to a browser</div></div>
-    <div class="metric"><div class="num"><span class="count" data-to="7">7</span></div><div class="lbl" data-i18n="m.4">open-source projects</div></div>
+    <span class="label" data-i18n="tl.k">the through-line</span>
+    <p class="reveal" data-i18n="tl.v">I take something real and messy (a teacher's lesson plan, a city's road network, a volunteering community) and turn it into software people actually use.</p>
   </div>
-</div>
+</section>
 
 <!-- ============ PROJECTS ============ -->
 <section class="section" id="projects">
@@ -107,7 +104,7 @@
     <div class="section-head">
       <div>
         <span class="label"><span class="k">ls</span> ./projects</span>
-        <h2 class="h2" data-i18n="proj.title">Selected projects</h2>
+        <h2 class="h2" data-i18n="proj.title">Selected work</h2>
       </div>
       <p data-i18n="proj.sub">All open source, documented and runnable. Open one for screenshots and details.</p>
     </div>
@@ -117,8 +114,7 @@
       <button type="button" data-filter="graphics" aria-pressed="false" data-i18n="filter.graphics">graphics &amp; simulation</button>
       <button type="button" data-filter="systems" aria-pressed="false" data-i18n="filter.systems">C / C++ &amp; vision</button>
     </div>
-    <div class="grid-featured" id="featured"></div>
-    <div class="grid-more" id="more"></div>
+    <div class="work" id="work"></div>
   </div>
 </section>
 
@@ -240,8 +236,8 @@
 <section class="section contact" id="contact">
   <div class="container">
     <span class="label"><span class="k">ping</span> meryem</span>
-    <h2 class="h2" style="margin-top:16px" data-i18n="contact.title">Looking for an intern who ships? Let's talk.</h2>
-    <p data-i18n="contact.text">I'm available for a 6-month end-of-studies internship from February 2027.</p>
+    <h2 class="h2" style="margin-top:16px" data-i18n="contact.title">Open to a 6-month internship from February 2027, <em class="hl">in Alsace or anywhere in France.</em></h2>
+    <p data-i18n="contact.text">On site, end-of-studies internship. Every project above comes with its code and a demo.</p>
     <a class="email-big" id="emailBig" href="mailto:belmouaddine.ptech@gmail.com"><span>belmouaddine.ptech@gmail.com</span><span class="copy" data-i18n="contact.copy">click to copy</span></a>
     <div class="contact-actions">
       <a class="btn btn-primary" href="https://www.linkedin.com/in/meryem-belmouaddine" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
