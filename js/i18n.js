@@ -53,7 +53,7 @@ window.I18N_FR = {
   'contact.sub': 'Vous cherchez une stagiaire dès février 2027 ? Écrivez-moi. Je réponds plus vite que mon C++ ne compile.',
   'contact.cv': 'CV (PDF) ↓',
   'credit': 'Photo : porte principale de la mosquée Hassan II par Tinuzzo, CC BY 4.0, via Wikimedia Commons. HTML, CSS et JS écrits à la main, sans framework ni template.',
-  'sb.bugs': '✓ 0 bug (à ma connaissance)',
+  'sb.bugs': '✓ 0 bug<span class="hide-sm"> (à ma connaissance)</span>',
   'lost.title': 'Cette page est <em>sur une autre branche.</em>',
   'lost.l1': '$ git checkout cette-page',
   'lost.l2': 'error: pathspec \'cette-page\' ne correspond à aucun fichier connu de git',

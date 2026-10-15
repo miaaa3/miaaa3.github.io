@@ -45,6 +45,7 @@ document.documentElement.classList.add('js');
   const figs = p => `<div class="figs">${p.figures.map(f => `<div class="fig"><b>${esc(pick(f.v))}</b><span>${esc(pick(f.l))}</span></div>`).join('')}</div>`;
   const info = p => `
     <div class="proj-info">
+      <p class="count">${String(PROJECTS.indexOf(p) + 1).padStart(2, '0')} / ${String(PROJECTS.length).padStart(2, '0')}</p>
       <p class="label">${esc(pick(p.label))}</p>
       <h3><a href="${caseUrl(p)}">${p.title}</a></h3>
       <p class="role">${esc(pick(p.role))} · ${p.year}</p>
