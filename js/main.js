@@ -225,24 +225,29 @@ document.documentElement.classList.add('js');
   /* =============== status bar: line, coffee, menu highlight =============== */
   let k0 = 0, lastLevel = 100;
   const sections = $$('[data-file]');
+  const navLinks = $$('.topnav a');
+  let curSection = null;
   function progress() { const h = document.documentElement; return h.scrollTop / Math.max(1, h.scrollHeight - h.clientHeight); }
   function onScroll() {
     const h = document.documentElement, k = progress();
     const line = $('#sbLine'), coffee = $('#sbCoffee');
-    if (line) line.textContent = `Ln ${Math.round(h.scrollTop / 24) + 1}, Col ${Math.round(k * 80) + 1}`;
+    const ln = `Ln ${Math.round(h.scrollTop / 24) + 1}, Col ${Math.round(k * 80) + 1}`;
+    if (line && line.textContent !== ln) line.textContent = ln;
     if (coffee) {
       const level = Math.round(Math.max(3, Math.min(100, 100 - Math.max(0, k - k0) / Math.max(.05, 1 - k0) * 97)));
-      coffee.textContent = `☕ ${level}%`;
+      if (level !== lastLevel || !coffee.textContent.includes('%')) coffee.textContent = `☕ ${level}%`;
       coffee.classList.toggle('low', level <= 25);
       for (const th of [75, 50, 25, 8]) if (lastLevel > th && level <= th) say(t().coffee[th]);
       lastLevel = level;
     }
     let cur = '';
     sections.forEach(s => { if (s.getBoundingClientRect().top < innerHeight * .35) cur = s.id; });
-    $$('.topnav a').forEach(a => a.classList.toggle('active', a.getAttribute('href').endsWith('#' + cur)));
+    if (cur !== curSection) { curSection = cur; navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href').endsWith('#' + cur))); }
   }
   function refill() { k0 = progress(); lastLevel = 100; onScroll(); say(t().coffee.refill); }
-  addEventListener('scroll', onScroll, { passive: true });
+  // at most one update per frame, whatever the scroll speed
+  let ticking = false;
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(() => { ticking = false; onScroll(); }); } }, { passive: true });
   const cup = $('#sbCoffee'); cup && cup.addEventListener('click', refill);
 
   /* =============== bug report =============== */
