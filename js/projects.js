@@ -1,5 +1,6 @@
 /* Project data, rendered by main.js. Text fields are { en, fr }.
-   label: the joke on the card. skin: how the card is dressed. accent: its colour. */
+   label: the joke on the card. skin: how the card is dressed. accent: its colour.
+   repo: null means the code is private (Bloom holds my real data). */
 window.PROJECTS = [
   {
     id: 'nexus', featured: true, cat: 'web graphics', kind: 'master', year: '2026',
@@ -66,6 +67,25 @@ window.PROJECTS = [
     repo: 'https://github.com/miaaa3/LingoBingo',
     video: 'assets/projects/lingobingo/demo.mp4', cover: 'assets/projects/lingobingo/cover.jpg',
     gallery: ['assets/projects/lingobingo/cover.jpg', 'assets/projects/lingobingo/student.jpg', 'assets/projects/lingobingo/teacher.jpg', 'assets/projects/lingobingo/flashcard.jpg', 'assets/projects/lingobingo/generator.jpg']
+  },
+  {
+    id: 'bloom', cat: 'web', kind: 'personal', year: '2026',
+    title: 'Bloom',
+    label: { en: 'runs my life, and this site’s colours', fr: 'range ma vie, et les couleurs du site' }, skin: 'bloom', accent: 'bloom', file: 'bloom.app', ic: 'ts',
+    short: { en: 'my Master’s, in one app', fr: 'mon master, dans une appli' },
+    strip: [['../projects/bloom/cover.jpg', 1600]],
+    role: { en: 'Personal project · solo', fr: 'Projet perso · seule' },
+    figures: [{ v: '9', l: { en: 'pages, from grades to interviews', fr: 'pages, des notes aux entretiens' } }, { v: 'Mac + iPhone', l: { en: 'one React codebase', fr: 'un seul code React' } }, { v: '0', l: { en: 'cloud servers', fr: 'serveur dans le cloud' } }],
+    desc: {
+      en: 'My own Mac app for my Master’s: grades with the real validation rules, timetable, projects, notes, internship applications and CV. It also opens on my iPhone.',
+      fr: 'Ma propre appli Mac pour mon master : notes avec les vraies règles de validation, emploi du temps, projets, carnet, candidatures de stage et CV. Elle s’ouvre aussi sur mon iPhone.'
+    },
+    metric: { en: 'Mac app + iPhone web app, local and PIN-protected', fr: 'appli Mac + appli iPhone, en local et protégée par code' },
+    points: { en: [], fr: [] },
+    tags: ['Electron', 'React 19', 'Vite', 'Node.js', 'iCalendar', 'LaTeX'],
+    repo: null,
+    cover: 'assets/projects/bloom/cover.jpg',
+    gallery: ['assets/projects/bloom/cover.jpg', 'assets/projects/bloom/modules.jpg', 'assets/projects/bloom/projets.jpg', 'assets/projects/bloom/stage.jpg']
   },
   {
     id: 'helpinghands', featured: true, cat: 'web', kind: 'intern', year: '2023 – 2026',

@@ -54,7 +54,7 @@ document.documentElement.classList.add('js');
       <div class="tags">${p.tags.map(x => `<span class="tag">${x}</span>`).join('')}</div>
       <div class="actions">
         <a class="btn btn-accent" href="${caseUrl(p)}">${t().caseStudy} →</a>
-        <a class="btn btn-ghost" href="${p.repo}" target="_blank" rel="noopener">${t().code} ↗</a>
+        ${p.repo ? `<a class="btn btn-ghost" href="${p.repo}" target="_blank" rel="noopener">${t().code} ↗</a>` : `<span class="private">${t().private}</span>`}
       </div>
     </div>`;
   const bar = (title, extra = '') => `<div class="win-bar"><span class="lights" aria-hidden="true"><i></i><i></i><i></i></span><span class="win-title">${title}</span>${extra}</div>`;
@@ -93,6 +93,11 @@ document.documentElement.classList.add('js');
             <figcaption><button type="button" data-guess="free">${t().lbp.free}</button><button type="button" data-guess="taken">${t().lbp.taken}</button></figcaption></figure>`).join('')}
         </div>
         <p class="viewer-out" aria-live="polite"></p>
+      </div>${info(p)}`,
+    bloom: p => `
+      <div class="proj-media bloom-set">
+        <div class="win">${bar('Bloom.app', `<span class="win-meta">✿ demo data</span>`)}${shot(p, p.cover, 'Bloom home screen with demo data')}</div>
+        <a class="phone" href="${caseUrl(p)}" tabindex="-1"><img src="${root}assets/projects/bloom/mobile.jpg" alt="Bloom on an iPhone" loading="lazy"></a>
       </div>${info(p)}`,
     post: p => `
       <div class="proj-media post">
@@ -144,6 +149,7 @@ document.documentElement.classList.add('js');
         ${figs(p)}
       </header>
       <figure class="win case-media skin-${p.skin}">${bar(p.file, `<span class="win-meta">${p.video ? 'demo.mp4' : 'cover.jpg'}</span>`)}${media}</figure>
+      ${p.id === 'bloom' ? `<p class="demo-note">✿ ${t().demo}</p>` : ''}
       <section class="case-block rise">${head('problem')}<p class="statement">${pick(c.problem)}</p></section>
       <section class="case-block rise">${head('twists')}
         <div class="twists">${c.hard.map((h, k) => `<article><p class="tn">#${k + 1}</p><h3>${esc(pick(h.t))}</h3><p>${esc(pick(h.d))}</p></article>`).join('')}</div></section>
@@ -156,7 +162,7 @@ document.documentElement.classList.add('js');
       ${c.improve ? `<section class="case-block rise">${head('improve')}<ul class="todo">${pick(c.improve).map(x => `<li>${esc(x)}</li>`).join('')}</ul></section>` : ''}
       ${p.gallery.length > 1 ? `<section class="case-block rise"><p class="case-label">${S.screens[0]} <span class="aside">// ${S.screens[1]}</span></p>
         <div class="gallery">${p.gallery.slice(1).map(src => `<span class="polaroid"><img src="${root}${src}" alt="${esc(p.title)} screenshot" loading="lazy"></span>`).join('')}</div></section>` : ''}
-      <div class="case-links rise"><a class="btn btn-accent" href="${p.repo}" target="_blank" rel="noopener">${t().code} ↗</a><a class="btn btn-ghost" href="${p.repo}#readme" target="_blank" rel="noopener">README ↗</a><a class="btn btn-ghost" href="mailto:belmouaddine.ptech@gmail.com?subject=${encodeURIComponent(p.title)}">${t().ask} ✉</a></div>
+      <div class="case-links rise">${p.repo ? `<a class="btn btn-accent" href="${p.repo}" target="_blank" rel="noopener">${t().code} ↗</a><a class="btn btn-ghost" href="${p.repo}#readme" target="_blank" rel="noopener">README ↗</a>` : `<span class="private">${t().private}</span>`}<a class="btn btn-ghost" href="mailto:belmouaddine.ptech@gmail.com?subject=${encodeURIComponent(p.title)}">${t().ask} ✉</a></div>
       <a class="next-case" href="${caseUrl(next)}" style="--accent:var(--${next.accent})"><span><small>${t().next} · ${esc(pick(next.label))}</small><strong>${next.title}</strong></span><span class="arrow" aria-hidden="true">→</span></a>`;
     rise($$('.rise', el));
     playWhenVisible($$('video', el));

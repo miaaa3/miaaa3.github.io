@@ -126,6 +126,41 @@ window.CASES = {
     stack: [['Angular', { en: 'front end', fr: 'front-end' }], ['Tailwind CSS', { en: 'interface', fr: 'interface' }], ['Spring Boot', { en: 'API, scoring', fr: 'API, notation' }], ['Spring Security', { en: 'JWT, roles', fr: 'JWT, rôles' }], ['MySQL', { en: 'data', fr: 'données' }], ['Docker Compose', { en: 'one-command setup', fr: 'lancement en une commande' }]]
   },
 
+  bloom: {
+    slug: 'bloom',
+    headline: { en: 'My Master’s, in one app <em>I built for myself.</em>', fr: 'Mon master, dans une appli <em>faite pour moi.</em>' },
+    intro: {
+      en: 'Bloom is a Mac app for my M2: grades and the exact validation rules, my class and work timetables, school projects, course notes, internship applications and my CV. It lives in the menu bar, sends reminders, and opens on my iPhone too.',
+      fr: 'Bloom est une appli Mac pour mon M2 : notes et règles de validation exactes, emplois du temps de cours et de travail, projets, carnet, candidatures de stage et CV. Elle vit dans la barre des menus, envoie des rappels, et s’ouvre aussi sur mon iPhone.'
+    },
+    meta: { en: 'Personal project · 2026 · solo · code private (it holds my real data)', fr: 'Projet perso · 2026 · seule · code privé (il contient mes vraies données)' },
+    problem: {
+      en: 'My grades lived in a PDF of rules, my timetable on the university portal, my work shifts in another app and my applications in a spreadsheet. Nothing could tell me <b>whether I would actually validate the year.</b>',
+      fr: 'Mes notes vivaient dans un PDF de règles, mon emploi du temps sur l’ENT, mes horaires de travail dans une autre appli et mes candidatures dans un tableur. Rien ne pouvait me dire <b>si j’allais vraiment valider l’année.</b>'
+    },
+    hard: [
+      { t: { en: 'An average is not enough', fr: 'Une moyenne ne suffit pas' },
+        d: { en: 'Each skills block must reach 10 and no subject can be at 0, or the year is lost even with 12 overall. Bloom computes every UE and block, mixes real and estimated grades, and answers “how much do I need?”.', fr: 'Chaque bloc de compétences doit atteindre 10 et aucune matière ne peut être à 0, sinon l’année est perdue même avec 12 de moyenne. Bloom calcule chaque UE et chaque bloc, mélange notes réelles et estimées, et répond à « combien il me faut ? ».' } },
+      { t: { en: 'Two calendars, one evening', fr: 'Deux agendas, une soirée' },
+        d: { en: 'The university timetable and my work shifts sync from iCalendar feeds every 30 minutes. Revision sessions are proposed in the evening, never on a day I work.', fr: 'L’emploi du temps de la fac et mes horaires de travail se synchronisent depuis des flux iCalendar toutes les 30 minutes. Les révisions sont proposées le soir, jamais un jour où je travaille.' } },
+      { t: { en: 'On my iPhone, without a cloud', fr: 'Sur l’iPhone, sans cloud' },
+        d: { en: 'The Mac serves the same React build on my network, behind a PIN hashed with scrypt. Changes stream live over one shared Server-Sent Events connection, because Safari limits connections per site.', fr: 'Le Mac sert le même build React sur mon réseau, derrière un code PIN haché avec scrypt. Les changements arrivent en direct par une seule connexion Server-Sent Events partagée, car Safari limite les connexions par site.' } }
+    ],
+    how: {
+      en: ['Electron for the Mac app and its menu-bar icon, React 19 and Vite for the interface', 'Data in plain JSON files, watched and reloaded live when they change', 'A projects board: to do, in progress, submitted, graded, with checklists', 'An internship tracker: offers and spontaneous applications, match score, cover letters, follow-ups', 'macOS notifications for exams, deadlines and interviews, and a recap every morning', 'A CV written in LaTeX, with a built-in check that applicant-tracking systems can read it'],
+      fr: ['Electron pour l’appli Mac et son icône dans la barre des menus, React 19 et Vite pour l’interface', 'Les données dans de simples fichiers JSON, surveillés et rechargés en direct quand ils changent', 'Un tableau de projets : à faire, en cours, rendu, noté, avec checklists', 'Un suivi de stage : offres et candidatures spontanées, score de correspondance, lettres, relances', 'Des notifications macOS pour les examens, rendus et entretiens, et un récap chaque matin', 'Un CV en LaTeX, avec un test intégré pour vérifier que les logiciels de recrutement savent le lire']
+    },
+    result: {
+      en: 'It runs my semester: grades, timetable, projects and my whole internship search, on the Mac and on my iPhone. It is also where this website’s colours come from.',
+      fr: 'Elle fait tourner mon semestre : notes, emploi du temps, projets et toute ma recherche de stage, sur le Mac et sur l’iPhone. C’est aussi d’elle que viennent les couleurs de ce site.'
+    },
+    improve: {
+      en: ['Reach it from outside my home network through a private VPN, since the iPhone only connects on the local network today'],
+      fr: ['Y accéder hors de chez moi via un VPN privé, car l’iPhone ne se connecte aujourd’hui qu’en réseau local']
+    },
+    stack: [['Electron', { en: 'Mac app, menu bar, notifications', fr: 'appli Mac, barre des menus, notifications' }], ['React 19', { en: 'interface', fr: 'interface' }], ['Vite', { en: 'build', fr: 'build' }], ['Node.js http', { en: 'iPhone server, SSE', fr: 'serveur iPhone, SSE' }], ['iCalendar', { en: 'timetables', fr: 'emplois du temps' }], ['LaTeX', { en: 'CV', fr: 'CV' }]]
+  },
+
   helpinghands: {
     slug: 'helpinghands',
     headline: { en: 'Volunteering, <em>as a social network.</em>', fr: 'Le bénévolat, <em>en réseau social.</em>' },

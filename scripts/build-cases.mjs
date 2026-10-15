@@ -13,7 +13,7 @@ const attr = s => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
 for (const p of PROJECTS) {
   const c = CASES[p.id];
   const title = `${p.title} · Mia OS`;
-  const accent = { mint: '#8FE3C8', amber: '#F6C177', rose: '#F3A9CF', peri: '#8E9CE6', lilac: '#DCD0F2' }[p.accent];
+  const accent = { mint: '#8FE3C8', amber: '#F6C177', rose: '#F3A9CF', peri: '#8E9CE6', lilac: '#DCD0F2', bloom: '#E7A8E0' }[p.accent];
   const desc = attr(strip(c.intro.en));
   const html = `<!DOCTYPE html>
 <html lang="en">
@@ -54,7 +54,7 @@ for (const p of PROJECTS) {
 </header>
 
 <main class="case" id="case">
-  <noscript><h1>${p.title}</h1><p>${strip(c.intro.en)}</p><p><a href="${p.repo}">Code on GitHub</a></p></noscript>
+  <noscript><h1>${p.title}</h1><p>${strip(c.intro.en)}</p>${p.repo ? `<p><a href="${p.repo}">Code on GitHub</a></p>` : ''}</noscript>
 </main>
 
 <footer class="statusbar">
