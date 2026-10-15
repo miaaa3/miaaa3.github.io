@@ -13,6 +13,7 @@ const attr = s => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
 for (const p of PROJECTS) {
   const c = CASES[p.id];
   const title = `${p.title} · Mia OS`;
+  const accent = { mint: '#8FE3C8', amber: '#F6C177', rose: '#F3A9CF', peri: '#8E9CE6', lilac: '#DCD0F2' }[p.accent];
   const desc = attr(strip(c.intro.en));
   const html = `<!DOCTYPE html>
 <html lang="en">
@@ -22,6 +23,7 @@ for (const p of PROJECTS) {
 <title>${title}</title>
 <meta name="description" content="${desc}">
 <meta name="theme-color" content="#141019">
+<style>body{--accent:${accent}}</style>
 <meta name="color-scheme" content="dark">
 <link rel="canonical" href="https://miaaa3.github.io/work/${c.slug}/">
 <meta property="og:type" content="article">
@@ -35,18 +37,18 @@ for (const p of PROJECTS) {
 <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body data-case="${p.id}" data-root="../../">
-<header class="titlebar">
-  <div class="lights" aria-hidden="true"><i></i><i></i><i></i></div>
-  <a class="titlebar-name" href="../../">mia-os <span>~/portfolio/projects/${p.file}</span></a>
+<a class="skip" href="#case" data-i18n="skip">Skip to content</a>
+<header class="menubar">
+  <a class="brand" href="../../" aria-label="Mia OS, home"><span class="brand-mark" aria-hidden="true">✿</span> Mia OS <span class="hide-sm path-inline">~/projects/${p.file}</span></a>
   <nav class="topnav" aria-label="Sections">
-    <a href="../../#projects" data-i18n="nav.work">projects</a>
-    <a href="../../#experience" data-i18n="nav.exp">experience</a>
-    <a href="../../#about" data-i18n="nav.about">about</a>
-    <a href="../../#contact" data-i18n="nav.contact">contact</a>
-    <button type="button" id="openTerm">&gt;_ <span data-i18n="nav.term">terminal</span></button>
+    <a href="../../#projects" data-i18n="nav.work">Projects</a>
+    <a href="../../#experience" data-i18n="nav.exp">Experience</a>
+    <a href="../../#about" data-i18n="nav.about">About</a>
+    <a href="../../#contact" data-i18n="nav.contact">Contact</a>
   </nav>
-  <div class="titlebar-actions">
-    <button type="button" class="pill" id="langBtn" data-i18n="lang">FR</button>
+  <div class="menubar-right">
+    <button type="button" class="pill pill-term" id="openTerm" aria-label="Open the terminal"><span aria-hidden="true">&gt;_</span><span class="hide-sm" data-i18n="nav.term">terminal</span></button>
+    <button type="button" class="pill" id="langBtn" data-i18n="lang" aria-label="Passer en français">FR</button>
     <a class="pill pill-rose" href="../../assets/CV-Meryem-Belmouaddine.pdf" target="_blank" rel="noopener">cv.pdf ↓</a>
   </div>
 </header>
@@ -56,16 +58,11 @@ for (const p of PROJECTS) {
 </main>
 
 <footer class="statusbar">
-  <span>⎇ main</span>
-  <span class="hide-sm">${p.file}</span>
-  <span class="sb-right"><span id="sbLine">Ln 1, Col 1</span><span class="hide-sm">UTF-8</span><span id="sbCoffee">☕ 100%</span></span>
+  <span class="hide-sm">⎇ main</span>
+  <button type="button" class="sb-btn" id="bugBtn" data-i18n="sb.bugs">✓ 0 bugs (that I know of)</button>
+  <span class="sb-msg" id="sbMsg" aria-live="polite"></span>
+  <span class="sb-right"><span class="hide-sm" id="sbLine">Ln 1, Col 1</span><button type="button" class="sb-btn" id="sbCoffee" aria-label="Refill coffee">☕ 100%</button></span>
 </footer>
-
-<dialog class="term" id="term" aria-label="Terminal">
-  <div class="term-bar"><span>TERMINAL</span><button type="button" id="termClose" aria-label="Close">×</button></div>
-  <pre class="term-out" id="termOut"></pre>
-  <form class="term-in" id="termForm" autocomplete="off"><label for="termInput">mia@mulhouse ~/portfolio $</label><input id="termInput" type="text" spellcheck="false" autocapitalize="off"></form>
-</dialog>
 
 <script src="../../js/projects.js"></script>
 <script src="../../js/i18n.js"></script>
